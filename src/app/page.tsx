@@ -19,7 +19,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto w-full flex justify-between items-center relative">
           <div className="absolute left-1/2 -translate-x-1/2 lg:static lg:left-auto lg:translate-x-0">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Fame Tonic Logo"
               width={200}
               height={80}
@@ -137,7 +137,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-end order-1 lg:order-2 ml-0 lg:-ml-48">
               <div className="relative">
                 <Image
-                  src="/banner.png"
+                  src="/banner.webp"
                   alt="Fametonic App Dashboard"
                   width={800}
                   height={1600}
