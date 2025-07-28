@@ -8,10 +8,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="w-full bg-gradient-to-r from-red-600 via-red-400 to-cyan-400 py-3 md:py-4 px-4">
+      <div className="w-full bg-gradient-to-r from-fametonic-red to-fametonic-cyan py-3 md:py-4 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-white font-semibold text-sm md:text-base">
           <span className="text-xl">🚀</span>
-          <span className="font-figtree font-[800] text-gray-50"><span className="text-cyan-400">FRESH BEGINNINGS SALE:</span> Extra 25% OFF, Limited Spots - start your journey today!</span>
+          <span className="font-figtree font-extrabold"><span className="text-cyan-300">FRESH BEGINNINGS SALE:</span> Extra 25% OFF, Limited Spots - start your journey today!</span>
         </div>
       </div>
 

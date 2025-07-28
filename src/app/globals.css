@@ -5,6 +5,11 @@
   --font-figtree: 'Figtree', sans-serif;
 }
 
+@theme {
+  --color-fametonic-cyan: oklch(0.771 0.131 208.11);
+  --color-fametonic-red: oklch(0.6287 0.251662 17.0865);
+}
+
 .font-urbanist {
   font-family: var(--font-urbanist);
 }

@@ -1,3 +1,5 @@
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
@@ -8,12 +10,7 @@ module.exports = {
       fontFamily: {
         urbanist: ['var(--font-urbanist)', 'sans-serif'],
         figtree: ['var(--font-figtree)', 'sans-serif'],
-      },
-      fontWeight: {
-        normal: 400,
-        semibold: 600,
-        bold: 700,
-      },
+      }
     },
   },
   plugins: [],
