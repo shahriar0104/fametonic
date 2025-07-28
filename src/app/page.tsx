@@ -1,103 +1,164 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <div className="w-full bg-gradient-to-r from-red-600 via-red-400 to-cyan-400 py-3 md:py-4 px-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-white font-semibold text-sm md:text-base">
+          <span className="text-xl">🚀</span>
+          <span className="font-figtree font-[800] text-gray-50"><span className="text-cyan-400">FRESH BEGINNINGS SALE:</span> Extra 25% OFF, Limited Spots - start your journey today!</span>
+        </div>
+      </div>
+
+      <nav className="bg-black px-4 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto w-full flex justify-between items-center relative">
+          <div className="absolute left-1/2 -translate-x-1/2 lg:static lg:left-auto lg:translate-x-0">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo.png"
+              alt="Fame Tonic Logo"
+              width={200}
+              height={80}
+              className="h-8 lg:h-12 w-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </div>
+
+          <div className="hidden md:flex items-center gap-6">
+            <button className="text-white hover:text-gray-300 transition-colors cursor-pointer">About us</button>
+            <button className="text-white hover:text-gray-300 transition-colors cursor-pointer">Contact</button>
+          </div>
+
+          <button
+            className="md:hidden text-white ml-auto"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            Read our docs
-          </a>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      {isMenuOpen && (
+        <div className="md:hidden bg-black border-t border-gray-800">
+          <div className="px-4 py-2 space-y-2">
+            <button className="block w-full text-left text-white hover:text-gray-300 transition-colors py-2">About us</button>
+            <button className="block w-full text-left text-white hover:text-gray-300 transition-colors py-2">Contact</button>
+          </div>
+        </div>
+      )}
+
+      <main className="px-4 py-8 lg:-mt-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center">
+            <div className="space-y-6 lg:space-y-8 order-2 lg:order-1 z-10">
+              <div className="space-y-2">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight font-urbanist">
+                  Want to Turn Social Media
+                </h1>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight font-urbanist">
+                  Into a Profitable Career?
+                </h1>
+              </div>
+
+              <div className="space-y-1">
+                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-cyan-400 drop-shadow-[2px_2px_4px_rgba(239,68,68,1)] drop-shadow-[0_0_8px_rgba(239,68,68,0.8)] font-urbanist">
+                  Discover your way to success
+                </p>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-cyan-400 drop-shadow-[2px_2px_4px_rgba(239,68,68,1)] drop-shadow-[0_0_8px_rgba(239,68,68,0.8)] font-urbanist">
+                  with Fametonic:
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Image
+                    src="/star.png"
+                    alt="Star icon"
+                    width={20}
+                    height={20}
+                    className="mt-0.5 flex-shrink-0 w-5 h-5"
+                  />
+                  <p className="text-white font-figtree font-semibold">Start growing your influence right away—no waiting required!</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Image
+                    src="/star.png"
+                    alt="Star icon"
+                    width={20}
+                    height={20}
+                    className="mt-0.5 flex-shrink-0 w-5 h-5"
+                  />
+                  <p className="text-white font-figtree font-semibold">Create viral TikToks and Reels step by step with easy-to-follow lessons</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Image
+                    src="/star.png"
+                    alt="Star icon"
+                    width={20}
+                    height={20}
+                    className="mt-0.5 flex-shrink-0 w-5 h-5"
+                  />
+                  <p className="text-white font-figtree font-semibold">Use a Personal AI Worker to boost your content</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Image
+                    src="/star.png"
+                    alt="Star icon"
+                    width={20}
+                    height={20}
+                    className="mt-0.5 flex-shrink-0 w-5 h-5"
+                  />
+                  <p className="text-white font-figtree font-semibold">Learn from expert-led courses designed for aspiring influencers</p>
+                </div>
+              </div>
+
+              {/* Desktop Get Started Button */}
+              <div className="pt-4 hidden md:block">
+                <button className="w-full md:w-auto bg-gradient-to-r from-pink-600 to-red-600 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center gap-2 shadow-[4px_4px_20px_rgba(34,197,94,0.8)] font-figtree cursor-pointer">
+                  <span>GET STARTED</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+                <p className="text-center md:text-left text-white text-sm mt-2 font-figtree">1-minute quiz for personalized Insights</p>
+              </div>
+
+              <div className="text-xs text-gray-400 text-center md:text-left space-y-1 font-figtree">
+                <p>By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms</p>
+                <p>Fametonic 2025 ©All Rights Reserved.</p>
+              </div>
+            </div>
+
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2 ml-0 lg:-ml-48">
+              <div className="relative">
+                <Image
+                  src="/banner.png"
+                  alt="Fametonic App Dashboard"
+                  width={800}
+                  height={1600}
+                  className="w-[650px] h-auto lg:w-[800px]"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      {/* Mobile Get Started Button - At bottom of content */}
+      <div className="md:hidden px-4 pb-8">
+        <button className="w-full bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center gap-2 hover:from-pink-600 hover:to-red-600 transition-all duration-200 shadow-[4px_4px_20px_rgba(34,197,94,0.8)] font-figtree cursor-pointer">
+          <span>GET STARTED</span>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+        <p className="text-center text-white text-sm mt-2 font-figtree">1-minute quiz for personalized Insights</p>
+      </div>
     </div>
   );
 }
