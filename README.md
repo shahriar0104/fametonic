@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fametonic - Turn Social Media Into a Profitable Career
 
-## Getting Started
+A modern, responsive landing page for Fametonic - the platform that helps aspiring influencers turn their social media presence into a profitable career.
 
-First, run the development server:
+## 🚀 Features
 
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Modern UI**: Built with Next.js 15 and Tailwind CSS v4
+- **Custom Fonts**: Urbanist and Figtree fonts for optimal typography
+- **Interactive Elements**: Hamburger menu for mobile navigation
+- **Gradient Effects**: Eye-catching gradients and shadow effects
+- **Optimized Images**: WebP format for faster loading
+
+## 🎨 Design Elements
+
+- **Sale Banner**: Prominent gradient banner with rocket emoji
+- **Hero Section**: Compelling copy with star-icon benefits list
+- **Call-to-Action**: Prominent "Get Started" button with green shadow
+- **Mobile-First**: Bottom-positioned CTA for mobile users
+- **Overlapping Layout**: Desktop image overlaps with text content
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS v4
+- **Fonts**: Google Fonts (Urbanist, Figtree)
+- **Images**: Next.js Image optimization
+- **Language**: TypeScript
+- **Development**: Turbopack for fast development
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: Single column layout with bottom CTA
+- **Tablet**: Adaptive grid system
+- **Desktop**: Two-column layout with overlapping image
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd fame-tonic
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+### Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+fame-tonic/
+├── src/
+│   ├── app/
+│   │   ├── globals.css      # Tailwind v4 styles
+│   │   ├── layout.tsx       # Root layout with fonts
+│   │   └── page.tsx         # Home page component
+│   └── ...
+├── public/
+│   ├── banner.webp          # Hero image
+│   ├── logo.webp            # Company logo
+│   └── star.png             # Star icon for benefits
+└── ...
+```
 
-## Deploy on Vercel
+## 🎯 Key Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Navigation**: Logo-centered with mobile hamburger menu
+- **Hero Section**: Main value proposition with benefits
+- **CTA Button**: Gradient button with shadow effects
+- **Mobile Menu**: Dropdown with About/Contact links
+- **Legal Text**: Terms and copyright information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Customization
+
+### Colors
+- Primary gradient: Red to Cyan
+- Button gradient: Pink to Red
+- Text shadows: Red and green effects
+
+### Fonts
+- **Urbanist**: Main headings and "Discover" text
+- **Figtree**: Body text, buttons, and navigation
+
+### Images
+- Optimized WebP format
+- Responsive sizing
+- Next.js Image component for performance
+
+## 📄 License
+
+Fametonic 2025 © All Rights Reserved.
+
+---
+
+Built with ❤️ using Next.js and Tailwind CSS
