@@ -17,7 +17,7 @@ export default function Home() {
 
       <nav className="bg-black px-4 py-4 flex justify-between items-center">
         <div className="max-w-7xl mx-auto w-full flex justify-between items-center relative">
-          <div className="absolute left-1/2 -translate-x-1/2 lg:static lg:left-auto lg:translate-x-0">
+          <div className="absolute left-1/2 -translate-x-1/2 md:static md:left-auto md:translate-x-0">
             <Image
               src="/logo.webp"
               alt="Fame Tonic Logo"
