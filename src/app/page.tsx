@@ -129,7 +129,7 @@ export default function Home() {
               </div>
 
               <div className="text-xs text-gray-400 text-center md:text-left space-y-1 font-figtree">
-                <p>By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms</p>
+                <p>By clicking &quot;Get Started&quot;, you agree with Terms and Conditions, Privacy Policy, Subscription Terms</p>
                 <p>Fametonic 2025 ©All Rights Reserved.</p>
               </div>
             </div>
